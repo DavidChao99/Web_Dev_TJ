@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>First API Example: ION</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		function callIon() {
+			var days = $("#numDays").val();
+			$.ajax(
+			{
+				url:"https://ion.tjhsst.edu/api/schedule",
+				data: {page_size:days},
+				dataType: "json",
+				success:function(result) {
+					console.log(result);
+					var outputDayTypes = "";
+					for(var k=0; k<days; k++) {
+						outputDayTypes += result.results[k].day_type.name;
+						outputDayTypes += "<br>";
+					}
+					$("#outputDiv").html(outputDayTypes);
+				}
+			})
+		}
+	</script>
+</head>
+<body>
+	<input id="numDays">
+	<button onClick="callIon()">Send Request</button>
+	<div id="outputDiv"></div>
+</body>
+</html>

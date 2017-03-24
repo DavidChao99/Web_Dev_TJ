@@ -1,0 +1,14 @@
+   div {
+    border:solid 1px;
+    padding: 3px;
+    margin: 12px;
+    width:50%;
+    color:white;
+    background-color:gray;
+   }
+
+   .frontLeft   li{
+    padding: 5px;
+    margin: 3px;
+
+   }

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Dom Tree Practice</title>
+	<style type="text/css">
+		 div {
+		 	border:solid 1px;
+		 	background-color: green;
+		 	padding: 3px;
+		 	margin: 12px;
+		 }
+
+		 .backrow {
+		 	background-color: purple;	
+		 }
+	</style>
+
+	<script type="Text/javascript">
+		function makeRed(event) {
+			console.log(event.target);
+			event.target.style.backgroundColor = "FF0000";
+		}
+	</script>
+</head>
+<body onclick="makeRed(event)">
+
+	<div class = "backrow">
+		<div>Bharat</div>
+		<div>Raef</div>
+		<div>Reilly</div>
+	</div>
+</body>
+</html>

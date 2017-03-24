@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Get The Weather</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$("#clickMe").click(function() {
+				console.log("I've been clicked");
+				var lonCoord = $("#long").val();
+				var latCoord = $("#lat").val();
+
+				$.ajax({
+					url:"http://api.openweathermap.org/data/2.5/weather",
+					data: {
+						lon: lonCoord,
+						lat: latCoord,
+						appid: "c77e06b35fdb83d6394492f9d8fe8511"
+					},
+					success:function(output) {
+						console.log(output);
+					}
+
+				})
+			});
+		});
+	</script>
+</head>
+<body>
+	<input id="long">
+	<input id="lat">
+	<div id="output"></div>
+	<button id="clickMe">Click Me!</button>
+
+</body>
+</html>

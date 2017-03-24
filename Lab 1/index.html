@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>First JS Page</title>
+
+	<link rel="stylesheet" type="text/css" href = "game.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+	<div id = "headContainer" class = "heading">
+		<h3 id = "time">Time Left: </h3>	
+
+		<div class = "dropDownContainer">
+			<div id = "dropDown" class="dropdown">
+			  <button onclick="openDropDown()" class="dropbtn">Select a Time</button>
+			  <div id="myDropdown" class="dropdown-content">
+			    <button onClick = "fifteenSec()">Fifteen Seconds</button>
+			    <button onClick = "thirtySec()">Thirty Seconds</button>
+			    <button onClick = "sixtySec()">One Minute</button>
+			  </div>
+			</div>
+		</div>
+
+	
+
+		<h3 id = "score">Score: 0</h3>
+
+		<div id="pause">
+			<button onclick="pauseTimer()" id = "pauseButton">Pause </button>
+			<button onclick="reset()" id = "resetButton">Restart </button>
+			<button onclick = "quit()" id = "quitButton">Quit </button>
+		</div>
+
+	</div>
+
+	<div id = "prompt">Hi</div>
+
+	<div class = "user_input">
+		Type: 
+		<input type = "text" id = "input" onkeyup = "check()"> 
+	</div>
+
+	<!--<a href="#openModal">Open Modal</a>-->
+
+	<div id="endModal" class="modalDialog">
+		<div>
+			<a href="index.html" title="Close" class="close">X</a>
+			<h2>Game Over</h2>
+			<div id = "endText"></div>
+			<a href = "index.html">Play Again?</a>
+		</div>
+	</div>
+
+
+	<script src = "typegame.js"></script>
+</body>
+</html>

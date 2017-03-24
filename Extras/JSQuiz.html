@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>JS Quiz 4/12/2016 David Chao</title>
+	<script type = "text/javascript">
+		function calcGrade() {
+			var Q1 = parseInt(document.getElementById("q1").value);
+			var Q2 = parseInt(document.getElementById("q2").value);
+
+			var gpa = (Q1 + Q2)/2;
+
+			document.getElementById("outputHere").innerHTML = gpa;
+
+		}
+	</script>
+</head>
+<body bgcolor = "#A2E4FA">
+
+	<h1> Period 1 </h1>
+	<br>
+	<h1> David Chao </h1>
+
+	<table>
+		<tr>
+			<td>GPA: </td>
+			<td> <div id="outputHere"> 4.0 </div> </td>
+
+		</tr>
+		<tr> 
+			<td>Quarter 1:</td>
+			<td>
+				<select onchange="calcGrade()" id = "q1">
+					<option value="4">A</option>
+					<option value="3">B</option>
+					<option value="2">C</option>
+					<option value="1">D</option>
+					<option value="0">F</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Quarter 2:</td>
+			<td>
+				<select onchange="calcGrade()" id = "q2">
+					<option value="4">A</option>
+					<option value="3">B</option>
+					<option value="2">C</option>
+					<option value="1">D</option>
+					<option value="0">F</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

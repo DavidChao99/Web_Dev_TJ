@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>First AJAX Call</title>
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		function calculate() {
+
+			$.ajax ({
+				url:"PostSBPHP.php",
+				data:{
+					num1:$("#num1".val()),
+					num2:$("#num2".val())
+				}
+				success:function(result) {
+					$("#outputDiv").html()
+				}
+
+			})
+
+			// var num1 = document.getElementById("num1").value;
+			// var num2 = document.getElementById("num2").value;
+			
+			// var ajax = new XMLHttpRequest();
+			// ajax.onreadystatechange= function() {
+			// 	if(ajax.readyState !=4 || ajax.status != 200) {
+			// 		return;
+			// 	}
+			// 	document.getElementById("outputDiv").innerHTML = ajax.responseText;
+			// }
+			// ajax.open("GET", "takeInput.php?num1=&num2=" + num2, true)
+			// ajax.send();
+		}
+	</script>
+</head>
+<body>
+	<input type=text id="num1">
+	<input type=text id="num2">
+	<button onclick="calculate()">submit</button>
+	<div id="outputDiv"></div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+body {
+background: #2c3e50; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2c3e50 , #3498db); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2c3e50 , #3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+div.nav_bar ul {
+	position:fixed;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+
+	background: #2c3e50; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #2c3e50 , #3498db); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #2c3e50 , #3498db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    border-bottom: 3px solid #000000; 
+	top:0;
+	width:100%;
+}
+
+div.nav_bar li {
+	float:left;
+	border-right: 1px solid #bbb;
+}
+
+#rightli {
+	float: right;
+}
+
+div.nav_bar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration:none;
+}
+
+div.nav_bar li a:hover {
+	background-color: #008080;
+}
+
+
+div.jumbotron {
+	padding: 60px;
+	background-image: url('rubiks-pic.png');
+	background-size: 100% auto;
+	height: 650px;
+}
+
+
+div.lists {
+	font-size: 35px;
+	color: #ffffff;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Times New Roman", serif;
+	color: #ffffff;
+}
+
+h2 {
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-color: #ffffff;
+}
+
+div.container {
+
+	color: #ffffff;
+	width: 1000px;
+    padding=left: 25px;
+    padding-right: 25px;
+    padding-bottom:15px;
+    padding-top:5px;
+    border: 15px solid #99ff99;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom:100px;
+    background-color: #595959;
+
+}

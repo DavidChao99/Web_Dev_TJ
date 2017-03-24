@@ -1,0 +1,109 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="survey_from_pindengo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="survey_pindengo.css">
+    <script src="survey.js"></script>
+  </head><body onload = "greeting()">
+    <h1>Welcome to My Pokemon Survey</h1>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" id="UserInfo">
+            <p></p>
+            <h1>User Info</h1>
+            <p></p>
+            <h3>Please Type in Your Address</h3>
+            <form role="form" action="response.php" method = "post" autocomplete="on">
+              <div class="form-group">
+                <label class="control-label" for="inputName">Username</label>
+                <input class="form-control" id="inputName" placeholder="Username" type="input" required="" autofocus="" name="username" onkeyup="setCookie()">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <input class="form-control" id="inputEmail" placeholder="junichi.masuda@gfreak.com" type="email" required="" name="email">
+              <div class="form-group">
+                <label class="control-label" for="inputCity">City</label>
+                <input class="form-control" id="inputCity" placeholder="City" type="text" required="" readonly="" name="city">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="inputState">State</label>
+                <input class="form-control" id="inputState" placeholder="State" type="input" required="" readonly="" name="state">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="inputZip">Zip Code</label>
+                <input class="form-control" id="inputZip" placeholder="12345" type="input" required="" name="zip">
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="inputEmail">Telephone Number</label>
+                <input class="form-control" id="inputEmail" placeholder="703-821-2142" type="input" required="" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+              </div>
+
+              </div>
+              <p></p>
+              <h3>What Generation is Your Favorite Pokemon?</h3>
+              <p></p>
+              <input type="radio" name="generation" value="1">I
+              <br>
+              <input type="radio" name="generation" value="2">II
+              <br>
+              <input type="radio" name="generation" value="3">III
+              <br>
+              <input type="radio" name="generation" value="4">IV
+              <br>
+              <input type="radio" name="generation" value="5">V
+              <h3>Would you rather view full lists or dropdowns</h3>
+              <input type="radio" name="listType" value="drop" checked="" onchange="handleChangeDrop()">DropDown
+              <input type="radio" name="listType" value="list" onchange="handleChangeList()">ListView
+              <h3>What Type?</h3>
+              <select id="TypeList" onchange="handleChangeType()" name="type">
+                <option value="1">Normal</option>
+                <option value="2">Fighting</option>
+                <option value="3">Flying</option>
+                <option value="4">Poison</option>
+                <option value="5">Ground</option>
+                <option value="6">Rock</option>
+                <option value="7">Bug</option>
+                <option value="8">Ghost</option>
+                <option value="9">Steel</option>
+                <option value="10">Fire</option>
+                <option value="11">Water</option>
+                <option value="12">Grass</option>
+                <option value="13">Electric</option>
+                <option value="14">Psychic</option>
+                <option value="15">Ice</option>
+                <option value="16">Dragon</option>
+                <option value="17">Dark</option>
+                <option value="18">Ground</option>
+              </select>
+              <select id="Pokemon" onchange="handleChangePokemon()" disabled="" name="pokemon"></select>
+              <br>
+              <h2>
+                Additional Comments
+              </h2>
+              <textarea name="message" rows="10" cols="40"></textarea> 
+              <br>
+              <button type="submit" class="btn btn-default" >Submit</button>
+
+              <br>
+              <br>
+              <br>
+              <a href= "../index.html"> HI </a>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <div id="divimg">
+  </div>
+
+</body></html>

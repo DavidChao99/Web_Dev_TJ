@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>First JS Page</title>
+
+	<link rel="stylesheet" type="text/css" href = "game.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<h3 id = "time">Time Left: </h3>	
+
+	<h3 id = "score">Score: 0</h3>
+
+	<button onclick="pauseTimer()" id = "pauseButton">Pause </button>
+
+	<div id = "prompt">Hi</div>
+
+	<div class = "user_input">
+		Type: 
+		<input type = "text" id = "input" onkeypress = "check()"> 
+	</div>
+
+
+	<script src = "typegame.js"></script>
+</body>
+</html>

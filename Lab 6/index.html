@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Riot API Call</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>		
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href = "masteryDisplay.css">
+
+</head>
+
+<body>
+	<input id="summonerName">
+	<button onClick="callRiot()">Send Request</button>
+
+	<svg width="700" height="660">
+  <defs>
+    <pattern id="image" x="0" y="0" patternUnits="userSpaceOnUse" height="160" width="160">
+      <image x="0" y="0" xlink:href="Ahri_Splash_Tile_1.jpg" width = "160" height = "160"></image>
+    </pattern>
+  </defs>
+  <circle id='top' cx="80" cy="80" r="80" fill="url(#image)"/>
+
+   <image x="0" y="0" xlink:href="https://i.imgur.com/7Nlcay7.jpg" width="100" height="100"></image> 
+</svg>
+
+	<div id="outputDiv"></div>
+	<script src="circlePacking.js"></script>
+	<script src="doStuff.js"></script>
+</body>
+</html>
